@@ -1,35 +1,25 @@
-# FNN (learning skeleton)
+# FNN (WIP learning project)
 
-This repo is a **C++20 compiled-library skeleton** for a from-scratch feedforward neural network project.
+This repository is a **work-in-progress** where I’m learning modern C++ by building a small neural network library (from scratch) for regression/classification.
 
-The goal is to give you a clean, real-world setup (build, layout, docs) while you implement the actual NN logic yourself.
+The emphasis is:
+- **I write the NN logic myself** (layers, losses, training, backprop, etc.)
+- The repo provides **good C++ structure + best-practice guidance** so C++ doesn’t get in the way
+- The codebase is expected to change as I learn and iterate
 
 ## Quick Start
 
-### Build and Run the smoke app
+### Build the library
 
 ```bash
 cmake -S . -B build
 cmake --build build
-./build/fnn_app
-```
-
-### Include the library in code
-
-```cpp
-#include <fnn/fnn.hpp>
-
-int main() {
-    fnn::ExampleComponent c{"hello"};
-    c.process();
-    return 0;
-}
 ```
 
 ## What’s intentionally missing
 
-- The actual NN logic (layers, training, backprop) is **left for you to implement**.
-- The interfaces under `include/fnn/` are **scaffolding** with TODOs.
+- This is a learning repo: some parts are incomplete and may be refactored frequently.
+- NN logic is implemented as I go; don’t expect stable APIs yet.
 
 ## Dependencies
 
@@ -56,6 +46,7 @@ cmake --build build
 ├── README.md
 ├── CppCheatsheet.md
 ├── CppCheatsheet.pdf
+├── Makefile
 ├── include/
 │   └── fnn/
 │       ├── config.hpp
@@ -65,15 +56,11 @@ cmake --build build
 │       ├── loss_func.hpp
 │       └── model.hpp
 ├── src/
-│   ├── component.cpp
 │   ├── activation_func.cpp
 │   ├── layer.cpp
 │   ├── loss_func.cpp
 │   └── model.cpp
-├── apps/
-│   └── main.cpp
-├── tests/
-│   └── test_smoke.cpp
+│   └── tensor*.cpp
 └── docs/
     └── BEST_PRACTICES.md
 ```
@@ -84,7 +71,7 @@ See `docs/BEST_PRACTICES.md` for repo-specific conventions and the “C to C++�
 
 ## Contributing
 
-This is a learning project. The neural network implementation is in the header file and can be extended with additional features.
+This is a personal learning project; contributions are welcome but the primary goal is learning-by-implementing.
 
 ## License
 

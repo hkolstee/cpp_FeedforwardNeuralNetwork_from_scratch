@@ -23,12 +23,10 @@ public:
 
     // zero intialization
     void zero_fill();
-
-    // Reshape to a new (rows, cols) pair.
+    // Reshape to a new (rows, cols) pair, effectively only metadata change.
     void reshape(std::size_t new_rows, std::size_t new_cols);
-
     // Shape itself
-    Shape shape() const noexcept;
+    [[nodiscard]] Shape shape() const noexcept;
 
 private:
     std::size_t rows_{0};

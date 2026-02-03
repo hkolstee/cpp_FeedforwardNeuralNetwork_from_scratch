@@ -14,6 +14,6 @@ inline constexpr std::string_view kVersion = "0.1.0";
 // Minimal numeric types used across the public API.
 using Scalar = double;
 using Vector = std::vector<Scalar>;
-using Dims = std::vector<size_t>;
+using Dims = std::vector<std::size_t>;
 
 } // namespace fnn

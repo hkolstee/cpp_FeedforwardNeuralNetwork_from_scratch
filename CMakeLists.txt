@@ -20,7 +20,9 @@ set(FNN_PUBLIC_HEADERS
     include/fnn/layer.hpp
     include/fnn/loss_func.hpp
     include/fnn/model.hpp
+    include/fnn/tensor.hpp
     include/fnn/tensor2D.hpp
+    include/fnn/util/math.hpp
 )
 
 set(FNN_SOURCES
@@ -28,7 +30,9 @@ set(FNN_SOURCES
     src/layer.cpp
     src/loss_func.cpp
     src/model.cpp
+    src/tensor.cpp
     src/tensor2D.cpp
+    src/util/math.cpp
 )
 
 if(FNN_BUILD_SHARED)

@@ -10,10 +10,11 @@ namespace fnn {
 class Tensor {
   public:
     Tensor(Dims dims);
+
     // returns number of elements in the tensor
-    size_t numel();
+    [[nodiscard]] size_t numel();
     // returns shape dimensionality
-    Dims shape();
+    [[nodiscard]] Dims shape();
     // Reshape to a new set of dimensions.
     void reshape(Dims dims);
 
